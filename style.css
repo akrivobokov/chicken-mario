@@ -1,1 +1,8 @@
-body{margin:0;overflow:hidden;background:#87ceeb;font-family:sans-serif}.screen{width:100vw;height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}#player{width:40px;height:40px;position:absolute;background-image:url('assets/chicken.png');background-size:cover}.platform{position:absolute;height:20px;background-image:url('assets/platform.png');background-size:cover}.enemy{width:40px;height:40px;position:absolute;background-image:url('assets/enemy.png');background-size:cover}.egg{width:20px;height:30px;position:absolute;background-image:url('assets/egg.png');background-size:cover}#controls{position:absolute;bottom:20px;width:100%;display:flex;justify-content:space-between;padding:0 20px}#move-buttons button,#jump-button-wrapper button{width:60px;height:60px;font-size:24px}
+body { margin:0; overflow:hidden; background:#87ceeb; font-family:sans-serif; }
+.screen { width:100vw; height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+#player { width:40px; height:40px; position:absolute; background-image:url('assets/chicken.png'); background-size:cover; }
+.platform { position:absolute; height:20px; background-image:url('assets/platform.png'); background-size:cover; }
+.enemy { width:40px; height:40px; position:absolute; background-image:url('assets/enemy.png'); background-size:cover; }
+.egg { width:20px; height:30px; position:absolute; background-image:url('assets/egg.png'); background-size:cover; }
+#controls { position:absolute; bottom:20px; width:100%; display:flex; justify-content:space-between; padding:0 20px; }
+#move-buttons button, #jump-button-wrapper button { width:60px; height:60px; font-size:24px; }
