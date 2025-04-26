@@ -10,13 +10,23 @@ let moveRight = false;
 let eggsCollected = 0;
 let totalEggs = 2;
 
-document.getElementById('left-button').addEventListener('touchstart', () => moveLeft = true);
-document.getElementById('left-button').addEventListener('touchend', () => moveLeft = false);
-document.getElementById('right-button').addEventListener('touchstart', () => moveRight = true);
-document.getElementById('right-button').addEventListener('touchend', () => moveRight = false);
-document.getElementById('jump-button').addEventListener('touchstart', () => {
-  if (onGround) { vy = 15; onGround = false; }
-});
+const leftBtn = document.getElementById('left-button');
+const rightBtn = document.getElementById('right-button');
+const jumpBtn = document.getElementById('jump-button');
+
+// Для мобильных устройств
+leftBtn.addEventListener('touchstart', () => moveLeft = true);
+leftBtn.addEventListener('touchend', () => moveLeft = false);
+rightBtn.addEventListener('touchstart', () => moveRight = true);
+rightBtn.addEventListener('touchend', () => moveRight = false);
+jumpBtn.addEventListener('touchstart', () => { if (onGround) { vy = 15; onGround = false; } });
+
+// Для компьютеров
+leftBtn.addEventListener('mousedown', () => moveLeft = true);
+leftBtn.addEventListener('mouseup', () => moveLeft = false);
+rightBtn.addEventListener('mousedown', () => moveRight = true);
+rightBtn.addEventListener('mouseup', () => moveRight = false);
+jumpBtn.addEventListener('mousedown', () => { if (onGround) { vy = 15; onGround = false; } });
 
 function startGame() {
   document.getElementById('menu').style.display = 'none';
