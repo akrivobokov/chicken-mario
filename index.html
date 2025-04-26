@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Chicken Mario</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#87ceeb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Chicken Mario">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+  <div id="menu" class="screen">
+    <h1>🐥 Chicken Mario</h1>
+    <button onclick="startGame()">Начать игру</button>
+  </div>
+
+  <div id="game" class="screen" style="display:none;">
+    <div id="score">Очки: 0</div>
+    <div id="level-counter">Уровень: 1</div>
+    <div id="player"></div>
+  </div>
+
+  <div id="win" class="screen" style="display:none;">
+    <h1>🎉 Ты выиграл уровень!</h1>
+    <button onclick="nextLevel()">Следующий уровень</button>
+  </div>
+
+  <div id="lose" class="screen" style="display:none;">
+    <h1>💥 Ты проиграл!</h1>
+    <button onclick="restartGame()">Играть снова</button>
+  </div>
+
+  <div id="final-win" class="screen" style="display:none;">
+    <h1>🏆 Ты прошёл всю игру!</h1>
+    <button onclick="restartGame()">Играть снова</button>
+  </div>
+
+  <div id="controls">
+    <div id="move-buttons">
+      <button id="left-button">⬅️</button>
+      <button id="right-button">➡️</button>
+    </div>
+    <div id="jump-button-wrapper">
+      <button id="jump-button">⬆️</button>
+    </div>
+  </div>
+
+  <script src="levels.js"></script>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+
+body {
+  margin:0;
+  font-family:sans-serif;
+  background:#87ceeb;
+}
+.screen {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  width:100vw;
+  height:100vh;
+}
+h1 {
+  font-size:2.5em;
+  margin-bottom:20px;
+}
+button {
+  font-size:1.5em;
+  padding:10px 20px;
+  border:none;
+  border-radius:10px;
+  background:#ffcc00;
+  cursor:pointer;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+button:hover {
+  background:#ff9900;
+}
+#player {
+  width:50px;
+  height:50px;
+  background:url('assets/chicken.png') no-repeat center/cover;
+  position:absolute;
+  bottom:0;
+  left:50px;
+}
+#score, #level-counter {
+  position:absolute;
+  top:10px;
+  font-size:1.2em;
+  color:#000;
+}
+#score {
+  left:10px;
+}
+#level-counter {
+  right:10px;
+}
+#controls {
+  position:fixed;
+  bottom:20px;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:space-between;
+  padding:0 20px;
+  pointer-events:none;
+}
+#move-buttons {
+  display:flex;
+  gap:10px;
+  pointer-events:auto;
+}
+#jump-button-wrapper {
+  pointer-events:auto;
+}
+#controls button {
+  width:60px;
+  height:60px;
+  font-size:24px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.7);
+  border:2px solid #999;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.3);
+  cursor:pointer;
+  user-select:none;
+}
+#controls button:active {
+  background:#ffcc00;
+}
